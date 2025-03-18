@@ -31,7 +31,7 @@ function Signup() {
 
     async function doSavewithpost() {
         // alert("");
-        let url = `http://franchisebackend.railway.internal/user/saveuserwithpost`;
+        let url = `http://localhost:2006/user/saveuserwithpost`;
         let resp = await axios.post(url, obj, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } });
         //used to convert the object to query string these headers 
         //alert(JSON.stringify(resp.data)); 

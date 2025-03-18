@@ -48,7 +48,7 @@ const Applications = () => {
 
     async function getApplications() {
         setLoading(true);
-        let url = "http://franchisebackend.railway.internal/admin/showApplications";
+        let url = "http://localhost:2006/admin/showApplications";
         try {
             const response = await axios.post(url);
             let applicationsData = response.data;
@@ -121,7 +121,7 @@ const Applications = () => {
 
     async function doApprove(uid) {
         let obj = { uid: uid };
-        let url = "http://franchisebackend.railway.internal/admin/approveApplication";
+        let url = "http://localhost:2006/admin/approveApplication";
         try {
             const resp = await axios.post(url, obj, {
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -135,7 +135,7 @@ const Applications = () => {
 
     async function doDecline(uid) {
         let obj = { uid: uid };
-        let url = "http://franchisebackend.railway.internal/admin/declineApplication";
+        let url = "http://localhost:2006/admin/declineApplication";
         try {
             const resp = await axios.post(url, obj, {
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -164,7 +164,7 @@ const Applications = () => {
         }
 
         let obj = { uid: uid, password: password };        
-        let url = "http://franchisebackend.railway.internal/admin/allotFranchise";
+        let url = "http://localhost:2006/admin/allotFranchise";
 
         try {
             const resp = await axios.post(url, obj, {
@@ -198,7 +198,7 @@ const Applications = () => {
                         alert("Error sending email to user");
                     });
             
-                    const saveUrl = "http://franchisebackend.railway.internal/franchisees/loginuser"; // Update with your backend URL
+                    const saveUrl = "http://localhost:2006/franchisees/loginuser"; // Update with your backend URL
                     await axios.post(saveUrl, obj, {
                         headers: { "Content-Type": "application/x-www-form-urlencoded"},
                     });

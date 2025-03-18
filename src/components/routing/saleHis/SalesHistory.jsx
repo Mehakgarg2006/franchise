@@ -17,7 +17,7 @@ function SalesHistory() {
 
     async function fetchSalesData() {
       try {
-        const response = await axios.get('http://franchisebackend.railway.internal/franData/getall');
+        const response = await axios.get('http://localhost:2006/franData/getall');
         console.log('Fetched Sales Data:', response.data);
 
         if (Array.isArray(response.data)) {

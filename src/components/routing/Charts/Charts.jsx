@@ -33,7 +33,7 @@ const Charts = () => {
         }
 
         try {
-            const response = await axios.get("http://franchisebackend.railway.internal/franData/sales", {
+            const response = await axios.get("http://localhost:2006/franData/sales", {
                 params: { uid, startDate, endDate },
             });
 

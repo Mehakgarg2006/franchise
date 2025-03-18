@@ -13,7 +13,7 @@ const Login = () => {
 
   const doSave = async () => {
     try {
-      const resp = await axios.post("http://franchisebackend.railway.internal/franchisees/checkuser", obj, {
+      const resp = await axios.post("http://localhost:2006/franchisees/checkuser", obj, {
         headers: { 'Content-Type': 'application/json' }
       });
 
