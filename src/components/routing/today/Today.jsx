@@ -21,8 +21,8 @@ const Today = () => {
 
   async function doSavewithpost() {
 
-    // let url = `http://localhost:2006/sales/savesaleswithpost`;
-    let url = "http://localhost:2006/franData/save";
+    // let url = `http://franchisebackend.railway.internal/sales/savesaleswithpost`;
+    let url = "http://franchisebackend.railway.internal/franData/save";
 
     let resp = await axios.post(url, obj, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } });
 

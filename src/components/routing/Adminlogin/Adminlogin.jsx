@@ -12,7 +12,7 @@ const AdminLogin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:2006/adminlogin/login', { uid, password });
+      const response = await axios.post('http://franchisebackend.railway.internal/adminlogin/login', { uid, password });
       alert(response.data.message);
       navigate('/applications');
     } catch (error) {

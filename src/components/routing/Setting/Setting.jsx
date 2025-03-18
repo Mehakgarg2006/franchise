@@ -27,7 +27,7 @@ function Settings({ onClose }) {
         }
 
         try {
-            const response = await axios.post("http://localhost:2006/auth/updatepassword",
+            const response = await axios.post("http://franchisebackend.railway.internal/auth/updatepassword",
                 {
                     uid,
                     oldPassword,
