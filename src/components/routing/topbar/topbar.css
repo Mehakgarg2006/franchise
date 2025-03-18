@@ -1,0 +1,70 @@
+/* Main container */
+.topbar-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* Aligns the menu to the right */
+    padding: 5px 5px;
+    height: 20px;
+    margin-top: 15px;
+    
+    /* margin: auto; */
+}
+
+/* Menu section */
+.menu-div {
+    display: flex;
+    align-items: center; /* Vertically centers the items */
+    justify-content: flex-end;
+    flex-grow: 1; /* Allow flex to grow and take full width */
+}
+
+/* Title (optional if needed) */
+.title {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+/* Signup Button */
+.btn {
+    color: black;
+    background-color: bisque;
+    padding: 10px 20px; /* Add padding for better touch on mobile */
+    cursor: pointer;
+    border-radius: 5px; /* Optional: Rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover state */
+.btn:hover {
+    color: blue;
+    background-color: darksalmon;
+}
+
+/* Media Query for Small Devices */
+@media (min-width: 768px) {
+    .topbar-container {
+        padding: 10px 10px;
+    }
+
+    .menu-div {
+        justify-content: center;
+    }
+
+    .btn {
+        padding: 8px 8px; /* Reduce padding on smaller screens */
+    }
+}
+
+/* Media Query for Extra Small Devices (Phones in portrait mode) */
+@media (max-width: 480px) {
+    .menu-div {
+        justify-content: center;
+        padding: 5px 5px;
+    }
+
+    .btn {
+        font-size: 14px; /* Make button text smaller */
+        padding: 8px 14px;
+    }
+}
